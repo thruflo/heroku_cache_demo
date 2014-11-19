@@ -5,10 +5,10 @@ from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.response import Response
 
-PORT = int(os.environ.get('PORT', 8080))
+PORT = int(os.environ.get('PORT', 5100))
 
 def index(request):
-    return Response('Hello %(name)s!' % request.matchdict)
+    return Response('OK')
 
 if __name__ == '__main__':
     config = Configurator()
